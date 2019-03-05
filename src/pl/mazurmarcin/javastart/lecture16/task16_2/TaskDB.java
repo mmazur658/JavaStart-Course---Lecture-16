@@ -51,7 +51,6 @@ public class TaskDB {
 				return null;
 			}
 		}
-
 	}
 
 	public List<Task> getOldTasks() {
@@ -85,6 +84,7 @@ public class TaskDB {
 
 		LocalDate today = LocalDate.now();
 		LocalDate sunday = today.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY));
+		
 		List<Task> recentTasks = new ArrayList<>();
 
 		for (Task task : tasks) {
